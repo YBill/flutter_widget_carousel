@@ -6,22 +6,30 @@ This plugin provides a widget carousel feature, supporting horizontal or vertica
 - Infinite looping.
 - Auto carousel.
 
+---------
+
+![example](https://github.com/YBill/flutter_widget_carousel/blob/master/screenshot/carousel_widget.gif)
+
+-------
+
+
+
 ## Usage
 
 ##### Use
 
 ```dart
     CarouselWidget(
-          count: 5,
-          itemBuilder: (context, index) {
-            return Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: Colors.primaries[2 * index],
-              child: Center(child: Text('Item $index', style: TextStyle(fontSize: 30, color: Colors.white))),
-            );
-          },
-        )
+count: 5,
+itemBuilder: (context, index) {
+return Container(
+width: double.infinity,
+height: double.infinity,
+color: Colors.primaries[2 * index],
+child: Center(child: Text('Item $index', style: TextStyle(fontSize: 30, color: Colors.white))),
+);
+},
+)
 ```
 
 
