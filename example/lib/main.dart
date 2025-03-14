@@ -27,15 +27,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Carousel Widget Demo'),
-      ),
+      appBar: AppBar(title: Text('Carousel Widget Demo')),
       body: SizedBox(
         height: 300,
         child: CarouselWidget(
           count: 5,
-          canManualSwitch: true,
           itemBuilder: (context, index) {
             return Container(
               width: double.infinity,

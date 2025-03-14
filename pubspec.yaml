@@ -1,7 +1,7 @@
 name: flutter_widget_carousel
 description: "Widget carousel feature, implemented purely in Flutter code."
 version: 0.0.1
-homepage:
+homepage: https://github.com/YBill/flutter_widget_carousel
 
 environment:
   sdk: ^3.6.1
