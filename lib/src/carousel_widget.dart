@@ -125,7 +125,8 @@ class _CarouselWidgetState extends State<CarouselWidget> {
   }
 
   Timer _getTimer() {
-    return Timer.periodic(Duration(milliseconds: widget.carouselIntervalMs), (timer) {
+    return Timer.periodic(Duration(milliseconds: widget.carouselIntervalMs),
+        (timer) {
       if (!mounted) {
         _clearTimer();
         return;
@@ -138,7 +139,9 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         return;
       }
       int nextPage = _controller!.page!.round() + 1;
-      _controller?.animateToPage(nextPage, duration: Duration(milliseconds: widget.animationDurationMs), curve: widget.animationCurve);
+      _controller?.animateToPage(nextPage,
+          duration: Duration(milliseconds: widget.animationDurationMs),
+          curve: widget.animationCurve);
     });
   }
 
@@ -154,7 +157,9 @@ class _CarouselWidgetState extends State<CarouselWidget> {
     Widget pageView = PageView.builder(
       scrollDirection: widget.scrollDirection,
       controller: _controller,
-      physics: widget.canManualSwitch ? const CustomPageViewScrollPhysics() : const NeverScrollableScrollPhysics(),
+      physics: widget.canManualSwitch
+          ? const CustomPageViewScrollPhysics()
+          : const NeverScrollableScrollPhysics(),
       itemBuilder: (buildContext, index) {
         int currentPage = index;
         if (currentPage < 0) currentPage = 0;
@@ -221,8 +226,10 @@ class _CarouselWidgetState extends State<CarouselWidget> {
     return RawGestureDetector(
       behavior: HitTestBehavior.opaque,
       gestures: {
-        _MultipleGestureRecognizer: GestureRecognizerFactoryWithHandlers<_MultipleGestureRecognizer>(() => _MultipleGestureRecognizer(),
-            (_MultipleGestureRecognizer instance) {
+        _MultipleGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<_MultipleGestureRecognizer>(
+                () => _MultipleGestureRecognizer(),
+                (_MultipleGestureRecognizer instance) {
           instance.onStart = (_) {};
           instance.onDown = (_) {
             _clearTimer();

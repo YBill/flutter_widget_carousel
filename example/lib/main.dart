@@ -37,7 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               height: double.infinity,
               color: Colors.primaries[2 * index],
-              child: Center(child: Text('Item $index', style: TextStyle(fontSize: 30, color: Colors.white))),
+              child: Center(
+                  child: Text('Item $index',
+                      style: TextStyle(fontSize: 30, color: Colors.white))),
             );
           },
         ),
