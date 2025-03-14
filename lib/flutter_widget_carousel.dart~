@@ -1,0 +1,3 @@
+library;
+
+export 'src/marquee_widget.dart';
