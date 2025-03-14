@@ -216,6 +216,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
   }
 
   /// Press your finger to stop the carousel, but slide the screen to continue the carousel
+  // ignore: unused_element
   Widget _getGestureWrapper(Widget child) {
     return RawGestureDetector(
       behavior: HitTestBehavior.opaque,
