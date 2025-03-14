@@ -6,15 +6,12 @@ This plugin provides a widget carousel feature, supporting horizontal or vertica
 - Infinite looping.
 - Auto carousel.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
 ## Usage
 
+##### Use
+
 ```dart
-	CarouselWidget(
+    CarouselWidget(
           count: 5,
           itemBuilder: (context, index) {
             return Container(
@@ -26,3 +23,25 @@ start using the package.
           },
         )
 ```
+
+
+
+##### 2、Parameter description
+
+| parameter           | type                 | explanation                                                  |
+| ------------------- | -------------------- | ------------------------------------------------------------ |
+| count               | int                  | Count of carousel items. required parameter                  |
+| itemBuilder         | IndexedWidgetBuilder | Used to build child widgets. required parameter              |
+| scrollDirection     | Axis                 | Scroll direction, default is Axis.horizontal                 |
+| canManualSwitch     | bool                 | Whether manual scrolling is allowed. default is true         |
+| autoCarousel        | bool                 | Auto carousel is allowed, default is true                    |
+| interruptCarousel   | bool                 | Whether to interrupt the auto carousel after manual scrolling. default is false |
+| loop                | bool                 | Whether to enable infinite scrolling. default is true        |
+| carouselIntervalMs  | int                  | Auto carousel interval, in milliseconds, default is 5000     |
+| animationDurationMs | int                  | Scroll duration, in milliseconds, default is 300             |
+| animationCurve      | Curve                | Animation curve, default is Curves.linear                    |
+| changedCallback     | ValueChanged<int>    | Carousel item changed callback, default is null              |
+| controller          | PageController       | For the PageView's controller: if not provided externally, the system will create one internally |
+
+
+
