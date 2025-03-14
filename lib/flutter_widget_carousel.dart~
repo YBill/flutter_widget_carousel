@@ -1,5 +1,0 @@
-library;
-
-export 'src/carousel_widget.dart';
-
-export 'src/custom_page_view_physics.dart';
