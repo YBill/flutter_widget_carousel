@@ -8,7 +8,10 @@ This plugin provides a widget carousel feature, supporting horizontal or vertica
 
 ---------
 
-![example](https://github.com/YBill/flutter_widget_carousel/blob/master/screenshot/carousel_widget.gif)
+<img src="https://github.com/YBill/flutter_widget_carousel/blob/master/screenshot/carousel_widget.gif"
+width="25%"
+alt="example"
+style="display:block; margin:auto;">
 
 -------
 
@@ -20,16 +23,16 @@ This plugin provides a widget carousel feature, supporting horizontal or vertica
 
 ```dart
     CarouselWidget(
-count: 5,
-itemBuilder: (context, index) {
-return Container(
-width: double.infinity,
-height: double.infinity,
-color: Colors.primaries[2 * index],
-child: Center(child: Text('Item $index', style: TextStyle(fontSize: 30, color: Colors.white))),
-);
-},
-)
+        count: 5,
+        itemBuilder: (context, index) {
+            return Container(
+              width: double.infinity,
+              height: double.infinity,
+              color: Colors.primaries[2 * index],
+              child: Center(child: Text('Item $index', style: TextStyle(fontSize: 30, color: Colors.white))),
+            );
+        },
+  )
 ```
 
 
